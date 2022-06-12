@@ -1,15 +1,22 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using ETicaretMVC.Models;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ETicaretMVC.Models
 {
     public class Product
     {
-        [Key]
         public int Id { get; set; }
 
+        [Column(TypeName = "Varchar")]
+        [Required, MaxLength(30)]
         public string Name { get; set; }
 
-        public string Barnd { get; set; }
+        [Column(TypeName = "Varchar")]
+        [MaxLength(30)]
+        public string Brand { get; set; }
 
         public short Stock { get; set; }
 
@@ -19,6 +26,12 @@ namespace ETicaretMVC.Models
 
         public bool Enum { get; set; }
 
+        [Column(TypeName = "Varchar")]
+        [MaxLength(250)]
         public string PhotoPath { get; set; }
+
+        public Category Category { get; set; }
+
+        public SalesMove SalesMove { get; set; }
     }
 }
