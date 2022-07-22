@@ -16,7 +16,7 @@ namespace ETicaretMVC.Models
         public int UserName { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [MaxLength(10)]
+        [Required, MaxLength(10)]
         public string Password { get; set; }
 
         [Column(TypeName = "char")]

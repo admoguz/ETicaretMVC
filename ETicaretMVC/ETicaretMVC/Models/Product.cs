@@ -15,7 +15,7 @@ namespace ETicaretMVC.Models
         public string Name { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [MaxLength(30)]
+        [Required, MaxLength(30)]
         public string Brand { get; set; }
 
         public short Stock { get; set; }

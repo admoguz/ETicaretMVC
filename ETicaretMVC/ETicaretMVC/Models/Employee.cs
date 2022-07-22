@@ -9,11 +9,11 @@ namespace ETicaretMVC.Models
         public int Id { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [MaxLength(30)]
+        [Required ,MaxLength(30)]
         public string Name { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [MaxLength(30)]
+        [Required, MaxLength(30)]
         public string Surname { get; set; }
 
         [Column(TypeName = "Varchar")]

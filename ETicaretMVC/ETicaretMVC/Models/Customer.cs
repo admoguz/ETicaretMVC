@@ -9,19 +9,19 @@ namespace ETicaretMVC.Models
         public int Id { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [MaxLength(30)]
+        [Required, MaxLength(30)]
         public string Name { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [MaxLength(30)]
+        [Required, MaxLength(30)]
         public string Surname { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [MaxLength(20)]
+        [Required, MaxLength(20)]
         public string City { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [MaxLength(50)]
+        [Required, MaxLength(50)]
         public string Email { get; set; }
 
         public SalesMove SalesMove { get; set; }
